@@ -6,14 +6,17 @@ import { productRouter } from "./routes/productRouter";
 import { orderRouter } from "./routes/orderRoute";
 import { logger } from "@bogeychan/elysia-logger";
 import jwt from "@elysiajs/jwt";
-import { authPlugin } from "./middleware/authPlugin";
+import authRouter from "./routes/authRouter";
+import { webhook } from "./routes/webhook";
+
+
 
 
 const app =new Elysia();
 
 
 app.use(cors());
-app.use(logger());
+// app.use(logger());
 app.use(
     swagger({
     path:"/swagger",
@@ -23,7 +26,9 @@ app.use(
     return "Main Route" ;
 })
 .use(userRouter)
+.use(webhook)
 .use(productRouter)
 .use(orderRouter)
-.use(authPlugin)
+.use(authRouter)
+
 .listen(3000);

@@ -14,11 +14,12 @@
     "@prisma/client": "6.0.1",
     "@types/bcrypt": "^5.0.2",
     "bcrypt": "^5.1.1",
-    "elysia": "latest"
+    "elysia": "latest",
+    "stripe": "^17.5.0"
   },
   "devDependencies": {
     "bun-types": "latest",
-    "prisma": "^6.0.1"
+    "prisma": "^6.1.0"
   },
   "module": "src/index.js"
 }

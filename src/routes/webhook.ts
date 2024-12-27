@@ -5,7 +5,7 @@ export const webhook = new Elysia({}).post(
   "/webhook",
   async ({ body, headers }) => {
     const stripeClient = new Stripe(Bun.env.STRIPE_SECRET_KEY as string, {
-      apiVersion: "2024-11-20.acacia",
+      apiVersion: "2024-12-18.acacia",
     });
     const sig = headers["stripe-signature"];
     let event;

@@ -4,7 +4,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "db:studio": "bunx prisma studio"
+    "db:studio": "bunx prisma studio",
+    "build": "tsc"
+    
+  
   },
   "dependencies": {
     "@bogeychan/elysia-logger": "^0.1.6",
@@ -19,7 +22,8 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "prisma": "^6.1.0"
+    "prisma": "^6.1.0",
+    "typescript": "^5.7.2"
   },
   "module": "src/index.js"
 }

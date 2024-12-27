@@ -40,6 +40,7 @@ export const orderRouter = new Elysia({ prefix: "/orders" })
           paymentStatus: "PENDING",
         },
       });
+      console.log(order);
       const __orderItems = await prisma.orderItem.createMany({
         data: orderItems.map((orderItem) => {
           return {

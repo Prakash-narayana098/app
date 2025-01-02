@@ -9,7 +9,7 @@ export const webhook = new Elysia({}).post("/webhook", async ({ body, headers })
     try {
         event = stripeClient.webhooks.constructEvent(
         // @ts-ignore
-        body, sig, "whsec_d542dbfdb39b6c167a2f9c5ecab4d83b911b50a22c96ba2f4bfbf92833b57453");
+        body, sig, " whsec_4d662855f700fe26ffbc3b223fbc8b43f2c82c7386979319056be3db50e90ce0");
     }
     catch (err) {
         return error(400, "Bad Request");
